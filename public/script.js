@@ -3,7 +3,7 @@ const socket = io("/");
 var peer = new Peer(undefined, {
     path: "/peerjs",
     host: "/",
-    port: "443",
+    port: location.protocol==='https'?443:3030,
 });
 
 const user = prompt("Enter your name");
